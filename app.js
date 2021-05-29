@@ -13,6 +13,12 @@ app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
 
+// Test API is working or not
+app.get("/ping", (req, res, next) => {
+  console.log("Pong!");
+  res.end("Pong!");
+});
+
 // National Stock Exchange (NSE) APIS
 
 // Get the stock market status (open/closed) - JSON
